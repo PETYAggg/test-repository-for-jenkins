@@ -14,4 +14,5 @@ public class TestTestedClass {
         TestedClass testedClass = new TestedClass();
         Assert.assertTrue(testedClass.checkIfDividableByTwo(6));
     }
+    //
 }
