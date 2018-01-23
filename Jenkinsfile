@@ -15,7 +15,7 @@ pipeline {
         stage ('Unit testing Stage') {
                    steps {
 
-                             bat( script: "sh mvn test")
+                             bat "sh mvn test"
 
                     }
                 }
@@ -23,7 +23,7 @@ pipeline {
         stage ('Deployment Stage') {
                    steps {
 
-                            bat( script: "sh mvn clean")
+                            bat "sh mvn clean"
 
                     }
                 }
