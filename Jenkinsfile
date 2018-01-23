@@ -8,25 +8,32 @@ pipeline {
     stages {
         stage ('Compile Stage') {
                    steps {
-                            bat "sh mvn clean compile"
+                            bat "mvn clean compile"
                     }
                 }
 
         stage ('Unit testing Stage') {
                    steps {
 
-                             bat "sh mvn test"
+                             bat "mvn test"
+
+                    }
+                }
+
+        stage ('Integration testing Stage') {
+                   steps {
+
+                            bat "mvn clean install"
 
                     }
                 }
 
         stage ('Deployment Stage') {
-                   steps {
+                           steps {
 
-                            bat "sh mvn clean"
+                                    bat "mvn clean"
 
-                    }
-                }
-
+                            }
+                        }
     }
 }
